@@ -1,0 +1,97 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+model Product {
+  id          String @id
+  name        String
+  category    String
+  label       String
+  price       Int
+  image       String
+  color       String
+  tag         String
+  fresh       Boolean
+  description String
+  material    String
+  sizes       Json
+  collection  String
+  position    Int @default(0)
+  cartItems   CartItem[]
+  wishlist    WishlistItem[]
+}
+
+model Visitor {
+  id        String @id
+  expiresAt DateTime
+  signedIn  Boolean @default(false)
+  profile   Profile?
+  cart      CartItem[]
+  wishlist  WishlistItem[]
+  orders    Order[]
+}
+
+model Profile {
+  visitorId String @id
+  name      String
+  email     String
+  visitor   Visitor @relation(fields: [visitorId], references: [id], onDelete: Cascade)
+}
+
+model CartItem {
+  visitorId String
+  productId String
+  size      String
+  qty       Int
+  visitor   Visitor @relation(fields: [visitorId], references: [id], onDelete: Cascade)
+  product   Product @relation(fields: [productId], references: [id], onDelete: Cascade)
+  @@id([visitorId, productId, size])
+}
+
+model WishlistItem {
+  visitorId String
+  productId String
+  visitor   Visitor @relation(fields: [visitorId], references: [id], onDelete: Cascade)
+  product   Product @relation(fields: [productId], references: [id], onDelete: Cascade)
+  @@id([visitorId, productId])
+}
+
+model Order {
+  id         String @id
+  visitorId  String
+  requestKey String
+  createdAt  DateTime @default(now())
+  name       String
+  email      String
+  phone      String
+  address    String
+  city       String
+  postal     String
+  shipping   String
+  payment    String
+  subtotal   Int
+  delivery   Int
+  total      Int
+  status     String @default("Dikonfirmasi (demo)")
+  visitor    Visitor @relation(fields: [visitorId], references: [id], onDelete: Cascade)
+  items      OrderItem[]
+  @@unique([visitorId, requestKey])
+  @@index([visitorId, createdAt])
+}
+
+model OrderItem {
+  id        Int @id @default(autoincrement())
+  orderId   String
+  productId String
+  size      String
+  qty       Int
+  name      String
+  price     Int
+  image     String
+  order     Order @relation(fields: [orderId], references: [id], onDelete: Cascade)
+}
