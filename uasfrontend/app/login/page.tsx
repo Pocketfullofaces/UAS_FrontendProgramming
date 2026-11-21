@@ -12,19 +12,23 @@ export default function Page() {
             </div>
             <span className="eyebrow"> YOUR OFFBEAT ACCOUNT </span>
             <h1> WELCOME BACK. </h1>
-            <p> Masuk ke profil demo yang sudah dibuat di browser ini. </p>
+            <p>
+              {" "}
+              Masuk ke profil demo yang sudah dibuat pada sesi browser ini.{" "}
+            </p>
           </div>
           <div className="panel">
             <div className="notice">
               {" "}
-              Demo tanpa kata sandi. Nama dan email disimpan secara lokal; tidak
-              ada autentikasi server.{" "}
+              Demo tanpa kata sandi. Gunakan email profil yang dibuat pada sesi
+              browser ini. Profil dari browser lain tidak dapat diakses.{" "}
             </div>
             <DemoForm kind="login" className="stack">
               <div className="field">
                 <label htmlFor="email"> Email profil demo </label>
                 <input
                   id="email"
+                  className="form-control"
                   name="email"
                   type="email"
                   required
