@@ -884,3 +884,63 @@ textarea:focus-visible {
   align-items: center;
 }
 
+.quantity button {
+  background: transparent;
+  border: 0;
+  padding: 7px 12px;
+}
+.quantity span {
+  padding: 0 10px;
+  font-size: 12px;
+}
+.remove {
+  background: none;
+  border: 0;
+  text-decoration: underline;
+  font-size: 11px;
+  display: block;
+  color: var(--muted);
+  padding: 0;
+  margin-top: 12px;
+}
+.summary-line {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  font-size: 13px;
+  margin: 14px 0;
+}
+.summary-line.total {
+  padding-top: 15px;
+  border-top: 1px solid var(--line);
+  font-weight: 700;
+  font-size: 18px;
+}
+.summary .btn {
+  margin-top: 12px;
+}
+.steps {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 25px;
+  font-size: 11px;
+  font-weight: 700;
+  flex-wrap: wrap;
+}
+.steps span {
+  color: var(--muted);
+}
+.steps b {
+  background: var(--acid);
+  padding: 3px 8px;
+}
+.radio-card {
+  display: block;
+  border: 1px solid var(--line);
+  padding: 13px;
+  font-size: 13px;
+}
+.radio-card input {
+  margin-right: 8px;
+  accent-color: var(--ink);
+}
