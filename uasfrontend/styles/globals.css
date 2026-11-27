@@ -1195,3 +1195,107 @@ th {
 .article ul {
   padding-left: 20px;
 }
+.look-banner {
+  background: var(--olive);
+  color: var(--paper);
+  padding: 40px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.look-banner .eyebrow {
+  color: var(--acid);
+}
+.hero-shirt {
+  width: 83%;
+  height: auto;
+  top: 1%;
+  left: -1%;
+}
+.hero-shirt.second {
+  width: 60%;
+  left: 39%;
+  top: 27%;
+}
+.sticker {
+  padding: 12px;
+}
+.sticker b {
+  font-size: 25px;
+  white-space: nowrap;
+}
+.art-caption {
+  z-index: 3;
+  font-size: 9px;
+  bottom: 15px;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+@media (min-width: 1600px) {
+  .hero-inner {
+    min-height: 650px;
+  }
+  .hero-art {
+    min-height: 610px;
+  }
+}
+@media (max-width: 1000px) {
+  .nav {
+    gap: 20px;
+  }
+  .nav-links {
+    gap: 17px;
+  }
+  .nav-actions {
+    margin-left: 10px;
+    gap: 12px;
+  }
+  .nav-actions .action-label {
+    display: none;
+  }
+  .hero h1 {
+    font-size: 78px;
+  }
+  .hero-inner {
+    min-height: 510px;
+  }
+  .hero-art {
+    min-height: 470px;
+  }
+  .hero-art:before {
+    width: 290px;
+    height: 290px;
+  }
+  .hero-shirt {
+    top: 12%;
+  }
+  .hero-shirt.second {
+    top: 36%;
+  }
+  .product-grid {
+    gap: 16px;
+  }
+  .product-meta {
+    flex-direction: column;
+    gap: 5px;
+  }
+  .category-card {
+    min-height: 250px;
+  }
+  .two-col {
+    gap: 30px;
+  }
+  .team-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
