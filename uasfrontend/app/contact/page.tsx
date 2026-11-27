@@ -67,6 +67,37 @@ export default function Page() {
                 </div>
                 </DemoForm>
             </div>
+            <div className="stack">
+                <div className="notice">
+                {" "}
+                Formulir demo: pesan hanya divalidasi di halaman ini, tidak
+                dikirim atau disimpan ke server.{" "}
+                </div>
+                <div className="panel">
+                <span className="eyebrow">QUICK HELP</span>
+                <h3>Jawabannya mungkin sudah ada.</h3>
+                <p>
+                    Temukan panduan ukuran, estimasi pengiriman, dan pertanyaan
+                    umum.
+                </p>
+                <div className="link-row">
+                    <Link href="/faq">Baca FAQ ↗</Link>
+                    <Link href="/size-guide">Panduan ukuran ↗</Link>
+                </div>
+                </div>
+                <div className="panel">
+                <span className="eyebrow"> THE PEOPLE BEHIND OFFBEAT </span>
+                <h3>Lima orang. Satu proyek.</h3>
+                <p>Deco, David, Juan, Kelvandi, dan Delfino.</p>
+                <Link
+                    href="/about"
+                    className="text-link"
+                    style={{ display: "inline-block", marginTop: "15px" }}
+                >
+                    Kenalan dengan kami ↗
+                </Link>
+                </div>
+            </div>
             </div>
         </div>
         </main>
