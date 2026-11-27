@@ -944,3 +944,37 @@ textarea:focus-visible {
   margin-right: 8px;
   accent-color: var(--ink);
 }
+
+.accordions details {
+  border-bottom: 1px solid var(--line);
+  padding: 20px 0;
+}
+.accordions summary {
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.accordions details p {
+  font-size: 14px;
+  max-width: 740px;
+  margin-top: 15px;
+  color: var(--muted);
+}
+.table-wrap {
+  overflow-x: auto;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+th,
+td {
+  text-align: left;
+  border-bottom: 1px solid var(--line);
+  padding: 16px;
+}
+th {
+  background: #e5e9d9;
+  font-size: 11px;
+}
